@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="EAMM Test Automation" parallel="false" verbose="1">
+	<test name="Build Verfication Tests" verbose="5">
+		<groups>
+			<run>
+				<include name="CT_BVT" /> 
+				<!-- <exclude name="Milestone7" /> -->
+			</run>
+		</groups>
+		<packages> 
+		<package name="com.kp.apps.web.nuvolo.customerPortalTests.*" /> 
+		<package name="com.kp.apps.web.nuvolo.ct.assetManagementAdmin.externalCompaniesTests.*" />
+		<package name="com.kp.apps.web.nuvolo.ct.assetManagement.InventoryTests.*" />
+		</packages>
+	</test> 
+<test name="Regression Tests" verbose="5">
+		<groups>
+			<run>
+				<!-- <include name="FO_Regression"/>  -->
+				<include name="CT_Regression"/> 
+				<exclude name="CT_BVT" />
+				<exclude name="FO_BVT" /> 
+				<!-- <exclude name="Milestone7" /> -->
+			</run>
+		</groups> 
+		<packages> 
+		<package name="com.kp.apps.web.nuvolo.customerPortalTests.*" /> 
+		<package name="com.kp.apps.web.nuvolo.ct.assetManagementAdmin.externalCompaniesTests.*" />
+		<package name="com.kp.apps.web.nuvolo.ct.assetManagement.InventoryTests.*" />
+		</packages>
+	</test>
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+</suite>

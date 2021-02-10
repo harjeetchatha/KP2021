@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EAMM Test Automation Regression Suite" parallel="methods" thread-count="7" verbose="3">
+   <parameter name="browser" value="${browser}"/>
+   <parameter name="env"  value="${env}" />
+      <test name="Regression Tests" verbose="5">
+        <packages>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagement.AlertsTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagement.ContractsTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagement.InventoryTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagement.ScheduleMaintenanceTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagement.WorkOrderTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagementAdmin.externalCompaniesTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagementAdmin.HazardsTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.customerPortalTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.fam.assetManagement.WorkOrderTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ft.assetManagement.ContractsTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ft.assetManagement.SupplierAccountsTests.*"/>
+        <package name="com.kp.apps.web.nuvolo.ft.FacilitiesassetManagement.externalCompaniesTests.*" />
+        <package name="com.kp.apps.web.nuvolo.ft.FacilitiesassetManagement.newWorkOrderTest.*" />
+        <package name="com.kp.apps.web.nuvolo.ft.FacilitiesassetManagementAdmin.workOrderTests.*"/>
+        </packages>
+     </test>  
+
+<listeners>
+     <listener class-name="com.kp.apps.web.library.TestRetryAnalyzerListener" />
+</listeners> 
+    
+</suite>

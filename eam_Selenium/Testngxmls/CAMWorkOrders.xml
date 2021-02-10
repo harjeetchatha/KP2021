@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EAMM Test Automation Regression Suite" parallel="methods" thread-count="7" verbose="3">
+   <parameter name="browser" value="${browser}"/>
+   <parameter name="env"  value="${env}" /> 
+      <test name="Regression Tests" verbose="5">
+        <packages>
+        <package name="com.kp.apps.web.nuvolo.ct.assetManagement.WorkOrderTests.*"/>
+        </packages>
+     </test>  
+<listeners>
+     <listener class-name="com.kp.apps.web.library.TestRetryAnalyzerListener" />
+</listeners> 
+</suite>
+        
